@@ -167,3 +167,7 @@ main{
         display:block;
     }
 }
+footer{
+    height:10vh;
+    background-color: black;
+}
