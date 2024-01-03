@@ -1,6 +1,7 @@
 :root{
     scroll-behavior: smooth;
-    scroll-padding-top: 5rem;
+    scroll-padding-top: 8rem;
+    overflow-X: hidden;
 }
 
 body{
@@ -8,10 +9,9 @@ body{
     font-family: lato, arial;
     background-color: rgb(255, 222, 222);
     text-align: center;
-    height:100vh;
 }
 
-.chi-sono, .musica{
+.musica{
     animation: fromLeft linear;
     animation-timeline: view(90% 0px);
 }
@@ -62,13 +62,14 @@ iframe{
 @keyframes fromLeft{
     from{
         opacity:0;
-        transform: translateX(-200px);
+        transform: translateX(-100px);
     }
-    50%{
+    26%{
         opacity:0;
     }
-    70%{
+    60%{
         opacity:1;
+        transform: translateX(0px)
     }
     to{
         opacity:1;
@@ -78,16 +79,21 @@ iframe{
 @keyframes fromRight{
     from{
         opacity:0;
-        transform: translateX(200px);
+        transform: translateX(100px);
     }
-    50%{
+    26%{
+        opacity:0;
+    }
+    60%{
         opacity:1;
+        transform: translateX(0px)
     }
     to{
         opacity:1;
         transform: translateX(0px);
     }
 }
+
 
 .content{
     transition: all .2s;
@@ -144,6 +150,7 @@ li a:hover{
 }
 main{
     margin-top: 100px;
+    margin-bottom: 100px;
 }
 
 
@@ -168,6 +175,14 @@ main{
     }
 }
 footer{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
     height:10vh;
-    background-color: black;
+    background-color: rgb(255, 170, 170);
+    display:flex;
+    align-items: center;
+    gap:50px;
+    padding:0 10px;
+    justify-content: center;
 }
