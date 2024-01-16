@@ -48,6 +48,10 @@ iframe{
 }
 .video-description-wrapper video{
     width:50%;
+
+}
+.video-description-wrapper video:hover{
+    background-color:rgba(255, 255, 255, 0.5);
 }
 
 @keyframes appear{
@@ -81,10 +85,10 @@ iframe{
         opacity:0;
         transform: translateX(100px);
     }
-    26%{
-        opacity:0;
+    20%{
+    opacity:0;
     }
-    60%{
+    40%{
         opacity:1;
         transform: translateX(0px)
     }
